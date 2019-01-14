@@ -150,10 +150,10 @@ class GNetwork:
                 if self.model["n"][i] != 3 and self.ro2[i][r] > 1:
                     np.set_printoptions(precision=2)
                     np.set_printoptions(suppress=True)
-                    print('Ro values: ')
-                    print(self.ro2)
+                    # print('Ro values: ')
+                    # print(self.ro2)
                     if self.adjustment_iteration > 1000:
-                        print('\nUnable to adjust number of service channels\n')
+                        # print('\nUnable to adjust number of service channels\n')
                         raise Exception('Incorrect values of ro for system nr ' + str(i))
                     return i
         return -1
@@ -180,9 +180,9 @@ class GNetwork:
         else:
             if self.mState == ModelState.INVALID:
                 self.mState = ModelState.VALID
-                print('\nNumber of service channels adjusted: ')
-                print(self.model["m"])
-                print('')
+                # print('\nNumber of service channels adjusted: ')
+                # print(self.model["m"])
+                # print('')
 
     # Computes first formula in 4.54
     def get_k_formula_a(self, i, r):
